@@ -1,0 +1,57 @@
+/* Styles for Menu (dropdown) */
+
+
+
+/*Additional styling for the navbar link*/
+.navbar-link {
+    text-decoration: none;
+    color: white;
+  }
+
+.transparent-menu {
+    background: transparent; /* Adjust the alpha value for transparency */
+    backdrop-filter: blur(10px); /* Adds a blur effect to the dropdown */
+  }
+
+  .transparent-icon-button {
+    background: transparent;
+    color: white;
+    width: 40px;
+  }
+
+  .navbar-logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    width: 300px;
+    margin-right: -45px;
+  }
+  
+  .logo-image {
+    width: 40px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+  
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Styles for Custom Logo */
+  .custom-logo {
+    font-size: 40px; /* Adjust the font size as needed */
+    color: white;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+  
+  .gold-gift-image {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px;
+    cursor: pointer;
+  }
+  

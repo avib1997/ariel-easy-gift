@@ -1,0 +1,47 @@
+.paymentmethed {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    color: white;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .payOption {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+    /* height: 65px; */
+  }
+  
+  .pay {
+    display: flex;
+    align-items: center;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    width: 100px;
+    padding: 2px;
+    height: 35px;
+  }
+
+  .payOption input:checked + .pay {
+    border-color: #007bff important; /* Change the border color to blue when checked */
+  }
+  
+  .payOption label {
+    margin-left: 10px; /* Adjust the margin as needed */
+    margin-bottom: 2px;
+    color: white;
+  }
+  
+  .payOption input {
+    margin-right: -5px; /* Adjust the margin as needed */
+    margin-left: 5px;
+    margin-bottom: 2px;
+    size: 100px;
+  }
+  
+  /* Optional: Add some styling for the selected option */
+  .payOption input:checked + label {
+    color: #007bff !important;
+  }

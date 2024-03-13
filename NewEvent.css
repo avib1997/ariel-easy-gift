@@ -1,0 +1,366 @@
+/* Body styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure the blur won't overflow */
+  gap: 20px;
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/goldWave.jpg') center/cover no-repeat;
+  filter: blur(10px); /* Adjust the blur value as needed */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Ensure the content is above the blurred background */
+}
+
+/* Container styling */
+.NewEvent-container {
+  padding: 20px;
+  width: 415px;
+  height: 800px;
+  margin-top: 100px;
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Form styling */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0px; /* Add margin-bottom for spacing */
+  margin-top: 20px; /* Add margin-bottom for spacing */
+}
+.input-container span {
+  position: absolute;
+  right: 10;
+  left: 0;
+  padding: 20px;
+  padding-left: 30px;
+  pointer-events: none;
+  font-size: 1em;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+.input-container input:valid ~ span,
+.input-container input:focus ~ span {
+  top: 0;
+  transform: translateX(10px) translateY(-7px);
+  padding: 0 15px;
+  background: rgb(93, 93, 93);
+  letter-spacing: 0.2em;
+  font-size: 0.65em;
+  color: white;
+  transition: 0.4s;
+  margin-bottom: 15px; /* Add margin-bottom for spacing */
+  border-radius: 50px;
+}
+.input-container input:valid,
+.input-container input:focus {
+  border: 5px solid white;
+}
+
+.label {
+  position: relative;
+  margin-bottom: 15px;
+  top: 10px;
+  left: 10px;
+  transition: 0.3s ease-out;
+  pointer-events: none;
+  color: white;
+}
+
+.input-container input {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  /* padding-left: 10px; */
+  margin-bottom: 15px;
+  border: 5px solid #ffffff;
+  border-radius: 50px;
+  background-color: transparent; /* Set to transparent */
+  outline: none; /* Remove default input focus outline */
+  color: white; /* Set text color to white */
+  transition: 0.5s;
+  margin-bottom: 15px; /* Add margin-bottom for spacing */
+}
+
+.input-container.higher-input input {
+  width: 100%;
+  height: 30px;
+  line-height: 20px; /* Adjust the line height as needed for multiple rows */
+  padding: 10px;
+  /* padding-left: 10px; */
+  margin-bottom: 15px;
+  border: 5px solid #ffffff;
+  border-radius: 50px;
+  background-color: transparent; /* Set to transparent */
+  outline: none; /* Remove default input focus outline */
+  color: white; /* Set text color to white */
+  transition: 0.5s;
+  margin-bottom: 15px; /* Add margin-bottom for spacing */
+}
+
+.input-container.higher-input textarea {
+  width: 100%;
+  height: 30px;
+  line-height: 20px; /* Adjust the line height as needed for multiple rows */
+  padding: 10px;
+  /* padding-left: 10px; */
+  margin-bottom: 15px;
+  border: 5px solid #ffffff;
+  border-radius: 50px;
+  background-color: transparent; /* Set to transparent */
+  outline: none; /* Remove default input focus outline */
+  color: white; /* Set text color to white */
+  transition: 0.5s;
+  margin-bottom: 15px; /* Add margin-bottom for spacing */
+}
+
+ .input-container.higher-input date {
+  width: 100%;
+  height: 30px;
+  line-height: 20px; /* Adjust the line height as needed for multiple rows */
+  padding: 10px;
+  /* padding-left: 10px; */
+  margin-bottom: 15px;
+  border: 5px solid #ffffff;
+  border-radius: 50px;
+  background-color: transparent; /* Set to transparent */
+  outline: none; /* Remove default input focus outline */
+  color: white; /* Set text color to white */
+  transition: 0.5s;
+  margin-bottom: 15px; /* Add margin-bottom for spacing */
+ }
+
+.input-field:focus {
+  border: 5px solid white;
+}
+
+.input-container input[type='text'] {
+  padding-left: 60px;
+}
+.input-container input[type='number'] {
+  padding-left: 60px;
+}
+
+
+
+.btndiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0px 100px 0px;
+}
+
+.btnNext { 
+  position: relative;
+  font-weight: 900;
+  font-size: 22px;
+  padding: 15px;
+  width: 200px;
+  color: goldenrod;
+  background: linear-gradient(90deg, rgb(221, 167, 29), rgb(251, 215, 11));
+  color: rgb(40, 40, 40);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.btnNext:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.3s,
+    height 0.3s;
+}
+
+.btnNext:active {
+  transform: scale(0.9); 
+  color: #fff;
+}
+
+.btnNext:active:before {
+  width: 300px;
+  height: 300px;
+}
+
+.btnCreateAccount {
+  position: relative;
+  font-size: 18px;
+  padding: 10px;
+  width: 180px;
+  background: transparent;
+  color: white;
+  border: 3px solid #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  transition:
+    background 0.3s,
+    color 0.3s;
+} 
+.btnCreateAccount:active {
+  transform: scale(0.9); 
+  color: #fff;
+}
+
+.btnCreateAccount:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.3s,
+    height 0.3s;
+}
+
+.blessing-site a {
+  position: relative;
+  font-size: 22px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline; /* Remove default underline */
+  overflow: hidden;
+  transition: color 0.3s;
+}
+
+.blessing-site a:hover {
+  background: rgba(
+    255,
+    215,
+    0,
+    0.1
+  ); /* Add a subtle background color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+  transform: scale(2.05); /* Scale up slightly on hover */
+}
+.blessing-site a:active {
+  transform: scale(0.9); /* Scale down slightly on click */
+}
+
+
+
+.margin {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.icon i {
+  position: absolute;
+  top: 50%; /* Adjust the vertical position as needed */
+  left: -25px; /* Adjust the horizontal position as needed */
+  transform: translateY(-50%);
+  font-size: 0.9em;
+  color: rgb(255, 255, 255);
+  padding: 8px;
+}
+a {
+  font-size: 20px;
+  padding: 15px;
+  width: 180px;
+  color: goldenrod; /* Green */
+  background: linear-gradient(90deg, rgb(221, 167, 29), rgb(251, 215, 11));
+  color: rgb(40, 40, 40);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 15px; /* Add margin-bottom for spacing */
+  overflow: hidden;
+}
+
+.login-container .btns a {
+  font-size: 20px;
+  padding: 15px;
+  height: 20px;
+  width: 180px;
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+
+.input-container .btns a > span {
+  position: absolute;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+}
+@keyframes animate {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+.row-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust margin as needed */
+.row-container .margin {
+  margin-right: 10px;
+}
+

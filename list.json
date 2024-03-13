@@ -1,0 +1,27 @@
+[
+    {
+      "event": "Wedding",
+      "icon": "💍"
+    },
+    {
+      "event": "13/12",
+      "icon": "🥂"
+    },
+    {
+      "event": "BirthDay",
+      "icon": "🎂"
+    },
+    {
+      "event": "Breakfast",
+      "icon": "☕"
+    },
+    {
+      "event": "Groom shabbat",
+      "icon": "🍷"
+    },
+    {
+      "event": "Brit/Brita",
+      "icon": "👶"
+    }
+  ]
+  

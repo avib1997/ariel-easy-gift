@@ -1,0 +1,65 @@
+.SumPageContainer {
+  padding: 20px;
+  width: 1400px;
+  height: 800px;
+  margin-top: 100px;
+  background: transparent; /* Adjust the alpha for transparency */
+}
+.search-label {
+  font-size: 40px;
+  color: white;
+  font-weight: 900;
+  
+}
+.text-end {
+  text-align: center;
+  background: transparent;
+  margin-bottom: 40px;
+  flex-direction: row;
+  color: white;
+  font-size: 1.5em;
+}
+.search-input {
+  width: 240px;
+  height: 20px;
+  padding: 10px;
+  margin-left: 10px;
+  background: rgba(255, 255, 255, 0.3); /* Adjust the alpha for transparency */
+  border: 3px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  font-size: large;
+  font-weight: 900;
+}
+.icon {
+  position: relative;
+  width: 60px;
+  height: 80%;
+  color: #757575;
+  font-size: 1.5em;
+}
+
+.table-container {
+  overflow: hidden; /* Hide overflowing content */
+  border-radius: 20px; /* Adjust the border radius as needed */
+  font-size: large;
+  background-color: transparent;
+  background: transparent;
+}
+
+.table {
+  font-size: large;
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: separate; /* Make borders separate from each other */
+  border-spacing: 0; /* No space between border cells */
+  background: transparent; /* Adjust the alpha for transparency */
+  border-radius: 20px; /* Adjust the border radius as needed */
+}
+
+.table th,
+.table td {
+  font-size: large;
+  border: 3px solid #fff; /* White border for table cells */
+  color: #fff; /* Text color - set to white or your desired color */
+}

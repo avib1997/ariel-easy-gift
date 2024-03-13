@@ -1,0 +1,482 @@
+/* Body styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure the blur won't overflow */
+  gap: 20px;
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/goldWave.jpg') center/cover no-repeat;
+  filter: blur(10px); /* Adjust the blur value as needed */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Ensure the content is above the blurred background */
+}
+
+/* Container styling */
+.login-container {
+  padding: 20px;
+  width: 415px;
+  height: 800px;
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 6px solid white;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  background-image: url('../images/b&g.jpeg'); /* Adjust the path accordingly */
+  background-size: cover; /* Ensures the image covers the entire circle */
+  background-position: center; /* Centers the image within the circle */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  margin-bottom: 50px; /* Add margin-bottom for spacing */
+}
+
+.circle img {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+}
+
+/* Form styling */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0px; /* Add margin-bottom for spacing */
+  margin-top: 20px; /* Add margin-bottom for spacing */
+}
+.input-container span {
+  position: absolute;
+  right: 10;
+  left: 0;
+  padding: 20px;
+  padding-left: 30px;
+  pointer-events: none;
+  font-size: 1em;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+.input-container input:valid ~ span,
+.input-container input:focus ~ span {
+  top: 0;
+  transform: translateX(10px) translateY(-7px);
+  padding: 0 15px;
+  background: rgb(93, 93, 93);
+  letter-spacing: 0.2em;
+  font-size: 0.65em;
+  color: white;
+  transition: 0.4s;
+  margin-bottom: 15px; /* Add margin-bottom for spacing */
+  border-radius: 50px;
+}
+.input-container input:valid,
+.input-container input:focus {
+  border: 5px solid white;
+}
+
+label {
+  position: relative;
+  margin-bottom: 15px;
+  top: 10px;
+  left: 10px;
+  transition: 0.3s ease-out;
+  pointer-events: none;
+  color: white;
+}
+
+.input-container input {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  /* padding-left: 10px; */
+  margin-bottom: 15px;
+  border: 5px solid #ffffff;
+  border-radius: 50px;
+  background-color: transparent; /* Set to transparent */
+  outline: none; /* Remove default input focus outline */
+  color: white; /* Set text color to white */
+  transition: 0.5s;
+  margin-bottom: 15px; /* Add margin-bottom for spacing */
+}
+
+.input-container.higher-input input {
+  width: 100%;
+  height: 30px;
+  line-height: 20px; /* Adjust the line height as needed for multiple rows */
+  padding: 10px;
+  /* padding-left: 10px; */
+  margin-bottom: 15px;
+  border: 5px solid #ffffff;
+  border-radius: 50px;
+  background-color: transparent; /* Set to transparent */
+  outline: none; /* Remove default input focus outline */
+  color: white; /* Set text color to white */
+  transition: 0.5s;
+  margin-bottom: 15px; /* Add margin-bottom for spacing */
+}
+
+.input-container.higher-input textarea {
+  width: 100%;
+  height: 30px;
+  line-height: 20px; /* Adjust the line height as needed for multiple rows */
+  padding: 10px;
+  /* padding-left: 10px; */
+  margin-bottom: 15px;
+  border: 5px solid #ffffff;
+  border-radius: 50px;
+  background-color: transparent; /* Set to transparent */
+  outline: none; /* Remove default input focus outline */
+  color: white; /* Set text color to white */
+  transition: 0.5s;
+  margin-bottom: 15px; /* Add margin-bottom for spacing */
+}
+
+.input-field:focus {
+  border: 5px solid white;
+}
+
+.input-container input[type="text"]{
+  padding-left: 60px;
+}
+.input-container input[type="number"]{
+  padding-left: 60px;
+}
+
+.icon{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #757575;
+  font-size: 1.5em;
+}
+.input-container:focus ~ .icon{
+  color: rgb(255, 255, 255);
+}
+
+.btndiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* button {
+  position: relative;
+  font-size: 20px;
+  padding: 15px;
+  width: 180px;
+  color: goldenrod;
+  background: linear-gradient(90deg, rgb(221, 167, 29), rgb(251, 215, 11));
+  color: rgb(40, 40, 40);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s;
+}
+
+
+button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+button:active {
+  transform: scale(0.90); 
+  color: #fff;
+}
+
+button:active:before {
+  width: 300px;
+  height: 300px;
+}
+
+button.second {
+  position: relative;
+  font-size: 18px;
+  padding: 10px;
+  width: 180px;
+  background: transparent;
+  color: white;
+  border: 3px solid #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s;
+} */
+
+.forgot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  margin-top: 20px;
+}
+
+.blessing-site a {
+  position: relative;
+  font-size: 22px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline; /* Remove default underline */
+  overflow: hidden;
+  transition: color 0.3s;
+}
+
+.blessing-site a:hover {
+  background: rgba(255, 215, 0, 0.1); /* Add a subtle background color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+  transform: scale(2.05); /* Scale up slightly on hover */
+}
+.blessing-site a:active {
+  transform: scale(0.90); /* Scale down slightly on click */
+}
+
+.payOption {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 420px;
+  /* height: 65px; */
+}
+
+.pay {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px;
+  border: 3px solid #fff ;
+  border-radius: 50px;
+  width: 180px;
+  margin: 10px;
+}
+
+.payOption label {
+  margin-left: 5px; /* Adjust the margin as needed */
+  margin-bottom: 20px;
+
+}
+
+.payOption input {
+  margin-right: -5px; /* Adjust the margin as needed */
+  margin-left: 5px;
+  margin-bottom: 2px;
+  size: 100px;
+}
+
+/* Optional: Add some styling for the selected option */
+.payOption input:checked + label {
+  color: #007bff; /* Change the color to your preferred selection color */
+}
+
+
+.forgot button {
+  position: relative;
+  font-size: 18px;
+  padding: 10px;
+  width: 180px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s;
+}
+
+.forgot button:active {
+  color: #fff;
+}
+
+.forgot-password {
+  text-decoration: underline;
+  color: white;
+  font-size: 16px;
+  cursor: pointer; /* Add a pointer cursor for better user experience */
+}
+
+
+.margin{
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
+.icon i {
+  position: absolute;
+  top: 50%; /* Adjust the vertical position as needed */
+  left: -25px; /* Adjust the horizontal position as needed */
+  transform: translateY(-50%);
+  font-size: 0.9em;
+  color: rgb(255, 255, 255);
+  padding: 8px ;
+}
+
+.LinkToBlessingSite{
+  font-size: 20px;
+  padding: 15px;
+  width: 180px;
+  color:goldenrod; /* Green */
+  background:linear-gradient(90deg, rgb(221, 167, 29) , rgb(251, 215, 11));
+  color: rgb(40, 40, 40);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 15px; /* Add margin-bottom for spacing */
+  overflow: hidden;
+}
+
+.login-container .btns a{
+  font-size: 20px;
+  padding: 15px;
+  height: 20px;
+  width: 180px;
+  color:#000000; 
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 30px;
+
+}
+
+.input-container .btns a> span{
+  position: absolute;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+}
+@keyframes animate {
+  0%{
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100%{
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+  
+}
+.custom-checkbox {
+  position: relative;
+  cursor: pointer;
+}
+.row{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px 0px;
+  font-size: 20px;
+  color: white;
+}
+
+.row label{
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.row input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.row label span{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: -30px;
+  margin-top: -5px;
+}
+
+
+.row label span::after{
+  content: '';
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+  width: 6px;
+  height: 6px;
+  border: solid gold;
+  border-width:0 4px 4px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.row input:checked ~ span::after{
+  opacity: 1;
+  width: 8px;
+  height: 18px;
+}
+
+.row-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust margin as needed */
+.row-container .margin {
+  margin-right: 10px;
+}
